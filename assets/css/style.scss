@@ -1,0 +1,29 @@
+.bg-gradient-tb {
+    background-image: linear-gradient(#0521bf, #001491);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#0521bf, #001491);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dcdcdc;
+    border-radius: 5px;
+}
+
+body {
+    background-color: #fff;
+    width: 100%;
+  
+}
+footer {
+    color: #fff;
+  }
+
+
+
