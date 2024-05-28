@@ -1,5 +1,4 @@
 <template>
-  <header>
     <!-- <nav>
         <ul>
           <li>
@@ -22,8 +21,8 @@
           </li>
         </ul>
       </nav> -->
-    <section class="border-b-05 bg-gradient-tb fixed w-full">
-      <section id="header-nav" class="fs-18 flex container mx-auto text-white" style="z-index: 99998">
+    <section class="border-b-05 bg-gradient-tb fixed w-full" style="z-index: 99998">
+      <section id="header-nav" class="fs-18 flex container mx-auto text-white" >
         <div class="flex justify-between items-end">
           <a href="https://meksmart.com/vi" class="text-xl"><img
               src="https://meksmart.com/storage/shares/IMG_LOGO/Meksmart-04.svg" class="img-logo" /></a>
@@ -162,7 +161,6 @@
         </div>
       </section>
     </section>
-  </header>
 </template>
 
 <script setup>
@@ -170,10 +168,6 @@ import { ref } from "vue";
 
 let route = ref("");
 let languages = ref("VN");
-const handleNavigateTo = (currentPage = "") => {
-  route = currentPage;
-  return navigateTo({ path: `/${route}` });
-};
 </script>
 
 <style lang="scss">

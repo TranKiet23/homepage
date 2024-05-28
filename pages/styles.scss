@@ -1,0 +1,46 @@
+#content-top {
+    padding-top: 4rem;
+}
+
+.rounded-bl-150 {
+    border-bottom-left-radius: 150px;
+
+    @media (min-width: 1024px) {
+        border-bottom-left-radius: 100px;
+    }
+}
+
+.bg-home {
+    height: auto;
+    min-height: 600px;
+    position: relative;
+}
+
+.h-no-menu {
+    height: calc(100vh - 100px);
+}
+
+.container {
+    width: 100%;
+    @media (min-width: 640px) {
+        max-width: 640px;
+    }
+    @media (min-width: 768px) {
+        max-width: 768px;
+    }
+    @media (min-width: 1024px) {
+        max-width: 1024px;
+    }
+}
+
+
+.btn-white-text-blue {
+    padding: 10px 25px;
+    color: #0521bf;
+    background: #fff;
+    border-radius: 10px;
+    line-height: 20px;
+    font-size: 18px;
+    font-family: Raleway-Bold;
+    text-transform: uppercase;
+}

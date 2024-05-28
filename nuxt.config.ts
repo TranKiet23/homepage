@@ -1,10 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', "vue3-carousel-nuxt"],
-  css: ['~/assets/css/tailwind.css'],
-  plugins: [
-    { src: '~/plugins/carousel.js', mode: 'client' }
-  ],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-swiper'],
+  css: ['~/assets/css/tailwind.css', '~/assets/css/main.css'],
   app: {
     head: {
       title: 'Meksmart',

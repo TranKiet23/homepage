@@ -1,7 +1,7 @@
 <template>
   <div>
-    <header_layout />
     <body class="mx-auto">
+    <header_layout />
       <slot />
     </body>
     <footer_layout />
