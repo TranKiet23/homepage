@@ -22,14 +22,30 @@
 
 .container {
     width: 100%;
+
     @media (min-width: 640px) {
         max-width: 640px;
     }
+
     @media (min-width: 768px) {
         max-width: 768px;
     }
+
     @media (min-width: 1024px) {
         max-width: 1024px;
     }
 }
 
+.bg-image-rcl {
+    background: url(https://meksmart.com/images/bg-quat-yellow.svg?e06809d325ad33e4dca573d7a9a15c4c) 50% no-repeat, url(https://meksmart.com/images/bg-quat-yellow.svg?e06809d325ad33e4dca573d7a9a15c4c) -7vw bottom no-repeat;
+    background-size: 430px, 50vw;
+    position: relative;
+
+    @media (max-width: 1023px) {
+        background-size: 70vw, 80vw;
+    }
+}
+
+.bg-gray-light {
+    background-color: #f4f4f4;
+}

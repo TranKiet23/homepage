@@ -1,45 +1,118 @@
 <template>
-    <div id="home-top" class="container mx-auto flex flex-wrap items-center">
-        <div class="w-full" style="width: 100%; display: inline-block;">
-            <div class="flex flex-wrap items-center w-full">
-                <div class="w-full sm:w-1/2 flex flex-col justify-center sm:pr-24">
-                    <h1 class="number-font font-bold text-left">MEKWMS WAREHOUSE MANAGEMENT SOLUTIONS</h1>
-                    <div class="flex w-full mt-5 lg:flex-no-wrap flex-wrap">
-                        <div class="flex text-center w-full lg:w-1/2 lg:pr-3"><button
-                                class="btn-white-text-blue modal-open lg:mb-0 mb-3 w-full" tabindex="0">Try
-                                Demo</button></div>
-                        <div class="flex text-center w-full lg:w-1/2 lg:pl-3"><a
-                                href="https://meksmart.com/en/solutions" class="btn-blue cursor-pointer w-full"
-                                tabindex="0">Read more</a></div>
+    <Swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{
+        delay: 2000,
+        disableOnInteraction: false,
+    }" :pagination="{
+        clickable: true,
+    }" :modules="modules" id="home-top" class="container mx-auto flex flex-wrap items-center" ref="mySwiper">
+        <SwiperSlide>
+            <div class="w-full" style="width: 100%; display: inline-block;">
+                <div class="flex flex-wrap items-center w-full">
+                    <div class="w-full sm:w-1/2 flex flex-col justify-center sm:pr-24">
+                        <h1 class="number-font font-bold h1-content text-left">SMART TECHNOLOGY<br> FOR LOGISTICS SOLUTION</h1>
+                        <div class="flex w-full mt-5 lg:flex-no-wrap flex-wrap">
+                            <div class="flex text-center w-full lg:w-1/2 lg:pr-3"><button
+                                    class="btn-white-text-blue modal-open lg:mb-0 mb-3 w-full" tabindex="0">Try
+                                    Demo</button></div>
+                            <div class="flex text-center w-full lg:w-1/2 lg:pl-3"><a
+                                    href="https://meksmart.com/en/solutions" class="btn-blue cursor-pointer w-full"
+                                    tabindex="0">Read more</a></div>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 flex justify-end items-center pl-6 sm:pr-0 pr-6 py-10"><img
+                            class="slick-slide-img"
+                            src="https://meksmart.com/storage/shares/Hinh%20Anh/H%C3%ACnh%20present-23.png"></div>
+                </div>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div class="w-full" style="width: 100%; display: inline-block;">
+                <div class="flex flex-wrap items-center w-full">
+                    <div class="w-full sm:w-1/2 flex flex-col justify-center sm:pr-24">
+                        <h1 class="number-font h1-content font-bold text-left">MEKWMS WAREHOUSE MANAGEMENT SOLUTIONS</h1>
+                        <div class="flex w-full mt-5 lg:flex-no-wrap flex-wrap">
+                            <div class="flex text-center w-full lg:w-1/2 lg:pr-3"><button
+                                    class="btn-white-text-blue modal-open lg:mb-0 mb-3 w-full" tabindex="0">Try
+                                    Demo</button></div>
+                            <div class="flex text-center w-full lg:w-1/2 lg:pl-3"><a
+                                    href="https://meksmart.com/en/solutions" class="btn-blue cursor-pointer w-full"
+                                    tabindex="0">Read more</a></div>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 flex justify-end items-center pl-6 sm:pr-0 pr-6 py-10"><img
+                            class="slick-slide-img"
+                            src="https://meksmart.com/storage/shares/Hinh Anh/Hình present-35.png"></div>
+                </div>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div class="w-full" style="width: 100%; display: inline-block;">
+                <div class="flex flex-wrap items-center w-full">
+                    <div class="w-full sm:w-1/2 flex flex-col justify-center sm:pr-24">
+                        <h1 class="number-font font-bold h1-content text-left">MEKTMS TRANSPORTATION AND DELIVERY MANAGEMENT
+                            SOLUTIONS</h1>
+                        <div class="flex w-full mt-5 lg:flex-no-wrap flex-wrap">
+                            <div class="flex text-center w-full lg:w-1/2 lg:pr-3"><button
+                                    class="btn-white-text-blue modal-open lg:mb-0 mb-3 w-full" tabindex="0">Try
+                                    Demo</button></div>
+                            <div class="flex text-center w-full lg:w-1/2 lg:pl-3"><a
+                                    href="https://meksmart.com/en/solutions" class="btn-blue cursor-pointer w-full"
+                                    tabindex="0">Read more</a></div>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 flex justify-end items-center pl-6 sm:pr-0 pr-6 py-10"><img
+                            class="slick-slide-img"
+                            src="https://meksmart.com/storage/shares/Hinh%20Anh/H%C3%ACnh%20present-02.png">
                     </div>
                 </div>
-                <div class="w-full sm:w-1/2 flex justify-end items-center pl-6 sm:pr-0 pr-6 py-10"><img
-                        src="https://meksmart.com/storage/shares/Hinh Anh/Hình present-35.png"></div>
             </div>
-        </div>
+
+        </SwiperSlide>
         <div class="slick-event w-full slick-big slick-initialized slick-slider slick-dotted">
-            <button type="button" class="slick-prev pull-left slick-arrow" style=""><img
+            <button type="button" class="slick-prev pull-left slick-arrow" @click="goPrev" style=""><img
                     src="https://meksmart.com/images/web/icon/element-09.svg" class="blue-icon"><img
                     src="https://meksmart.com/images/web/icon/white-hover-prev.svg" class="orange-icon">
             </button>
-            <button type="button" class="slick-next pull-right slick-arrow" style=""><img
+            <button type="button" class="slick-next pull-right slick-arrow" @click="goNext" style=""><img
                     src="https://meksmart.com/images/web/icon/to-right-blue.svg" class="blue-icon"><img
                     src="https://meksmart.com/images/web/icon/white-hover-next.svg" class="orange-icon">
             </button>
 
         </div>
-    </div>
+    </Swiper>
+
 </template>
 
 <script>
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { useSwiper } from 'swiper/vue';
 export default {
     setup() {
-
+        const swiper = useSwiper();
+        return {
+            modules: [Autoplay, Pagination, Navigation],
+            swiper,
+        }
     },
+    methods: {
+        goPrev() {
+            console.log("🚀 ~ goPrev ~ this.$refs.mySwiper.swiper:", this.refs)
+
+
+        },
+        goNext() {
+            console.log("🚀 ~ goPrev ~ this.$refs.mySwiper.swiper:", this.refs)
+
+        },
+    }
 }
 </script>
 
 <style lang="scss">
+#home-top {
+    min-height: 350px;
+}
+
 .bg-gradient-lr {
     background-image: linear-gradient(90deg, #0521bf, #001491);
 }
@@ -55,7 +128,8 @@ export default {
 }
 
 .slick-dotted.slick-slider {
-    margin-bottom: 30px;
+    margin-bottom: 55px;
+
 }
 
 .slick-slider {
@@ -68,7 +142,17 @@ export default {
     -khtml-user-select: none;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+
+
+
 }
+
+.slick-slide-img {
+    max-height: 360px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
 
 .slick-big .slick-prev {
     left: 0;
@@ -111,7 +195,7 @@ export default {
     z-index: 11;
 }
 
-h1 {
+.h1-content {
     font-size: 55px;
     color: #fff;
 
@@ -127,24 +211,6 @@ h1 {
 
 .number-font {
     font-family: Arial, Helvetica, sans-serif !important;
-}
-
-.slick-event .slick-prev .blue-icon {
-    display: block;
-}
-
-.slick-event .slick-prev .orange-icon,
-.slick-event .slick-prev:hover .blue-icon {
-    display: none;
-}
-
-.slick-event .slick-next .blue-icon {
-    display: block;
-}
-
-.slick-event .slick-next .orange-icon,
-.slick-event .slick-next:hover .blue-icon {
-    display: none;
 }
 
 .btn-white-text-blue {
@@ -177,5 +243,16 @@ h1 {
         background-color: #001491;
         background-image: none;
     }
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    height: 50vh;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 </style>
