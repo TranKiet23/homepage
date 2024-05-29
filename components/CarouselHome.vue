@@ -22,8 +22,11 @@
                     src="https://meksmart.com/images/web/icon/element-09.svg" class="blue-icon"><img
                     src="https://meksmart.com/images/web/icon/white-hover-prev.svg" class="orange-icon">
             </button>
-            <div class="slick-list draggable">
-            </div>
+            <button type="button" class="slick-next pull-right slick-arrow" style=""><img
+                    src="https://meksmart.com/images/web/icon/to-right-blue.svg" class="blue-icon"><img
+                    src="https://meksmart.com/images/web/icon/white-hover-next.svg" class="orange-icon">
+            </button>
+
         </div>
     </div>
 </template>
@@ -37,7 +40,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import url(../pages/styles.scss);
+.bg-gradient-lr {
+    background-image: linear-gradient(90deg, #0521bf, #001491);
+}
 
 .slick-big {
     position: relative;
@@ -65,6 +70,14 @@ export default {
     -webkit-tap-highlight-color: transparent;
 }
 
+.slick-big .slick-prev {
+    left: 0;
+    bottom: -40px;
+    width: 45px;
+    top: unset;
+    z-index: 11;
+}
+
 .slick-next,
 .slick-prev {
     font-size: 0;
@@ -78,5 +91,88 @@ export default {
     transform: translateY(-50%);
     cursor: pointer;
     border: none;
+}
+
+.slick-next:before,
+.slick-prev:before {
+    font-family: slick;
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #fff;
+    -webkit-font-smoothing: antialias
+}
+
+.slick-big .slick-next {
+    left: 50px;
+    bottom: -40px;
+    width: 45px;
+    top: unset;
+    z-index: 11;
+}
+
+.number-font {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 55px;
+    color: #fff;
+
+    @media (min-width: 1200px) {
+        font-size: 40px !important;
+
+    }
+
+    @media (min-width: 1536px) {
+        font-size: 55px;
+    }
+}
+
+.slick-event .slick-prev .blue-icon {
+    display: block;
+}
+
+.slick-event .slick-prev .orange-icon,
+.slick-event .slick-prev:hover .blue-icon {
+    display: none;
+}
+
+.slick-event .slick-next .blue-icon {
+    display: block;
+}
+
+.slick-event .slick-next .orange-icon,
+.slick-event .slick-next:hover .blue-icon {
+    display: none;
+}
+
+.btn-white-text-blue {
+    padding: 10px 25px;
+    color: #0521bf;
+    background: #fff;
+    border-radius: 10px;
+    line-height: 20px;
+    font-size: 18px;
+    font-family: Raleway-Bold;
+    text-transform: uppercase;
+
+    &:hover {
+        color: #f28021;
+    }
+}
+
+.btn-blue {
+    padding: 10px 25px;
+    border: 1px solid #fff;
+    background-image: linear-gradient(#0521bf, #001491);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: Raleway-Bold;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: #001491;
+        background-image: none;
+    }
 }
 </style>
