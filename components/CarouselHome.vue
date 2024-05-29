@@ -111,8 +111,7 @@ export default {
     z-index: 11;
 }
 
-.number-font {
-    font-family: Arial, Helvetica, sans-serif !important;
+h1 {
     font-size: 55px;
     color: #fff;
 
@@ -124,6 +123,10 @@ export default {
     @media (min-width: 1536px) {
         font-size: 55px;
     }
+}
+
+.number-font {
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 .slick-event .slick-prev .blue-icon {
