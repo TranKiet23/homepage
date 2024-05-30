@@ -2,11 +2,16 @@
 import CarouselHome from "../components/CarouselHome.vue"
 import HomePageReadMe from "./HomePageReadMore.vue"
 import HomePageManage from "./HomePageManage.vue"
+import HomePageFieldsLogistic from "./HomePageFieldsLogistic.vue"
+import HomePageEvent from "./HomePageEvent.vue"
+
 
 components: {
   CarouselHome,
   HomePageReadMe,
-  HomePageManage
+  HomePageManage,
+  HomePageFieldsLogistic,
+  HomePageEvent
 }
 </script>
 
@@ -18,6 +23,10 @@ components: {
   <div id="home">
       <HomePageReadMe />
       <HomePageManage />
+      <HomePageFieldsLogistic />
+      <HomePageEvent />
+
+
     </div>
 </template>
 

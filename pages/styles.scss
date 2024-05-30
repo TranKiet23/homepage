@@ -46,6 +46,265 @@
     }
 }
 
+.radius-top-right {
+    border-top-right-radius: 95px;
+}
+
+
+
 .bg-gray-light {
     background-color: #f4f4f4;
+}
+
+.body-linh-vuc {
+    .bg-linh-vuc {
+        background: url(https://meksmart.com/images/element-05.png?d5a0e7d458054e25703a8579145c3533) 100% 100% no-repeat;
+        background-size: 24vw;
+        position: relative;
+        padding-bottom: 100px;
+    }
+}
+
+.body-linh-vuc .bg-linh-vuc.bg-white {
+    background-color: #fff;
+}
+
+.body-linh-vuc .bg-linh-vuc .bg-linh-vuc-top:before {
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(https://meksmart.com/images/element-05.png?d5a0e7d458054e25703a8579145c3533) 100% 100% no-repeat;
+    background-size: 24vw;
+    transform: rotate(180deg);
+}
+
+.bg-quat-bottom-right {
+    padding: 130px;
+    background-color: #fff;
+    border-bottom-left-radius: 95px;
+
+    &::before {
+        background: url(https://meksmart.com/images/bg-quat-yellow.svg?e06809d325ad33e4dca573d7a9a15c4c) 100% 100% no-repeat;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-size: 35vw;
+    }
+}
+
+#tinh-nang {
+    .bg-tinh-nang {
+        position: relative;
+        background-image: linear-gradient(#ebedf8 10%, #fff 90%);
+        z-index: 0;
+        padding-bottom: 180px;
+
+        &::before {
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: .1;
+            background: url(https://meksmart.com/images/element-03.png?90de1658f841244ae7561b1d091b3f03) 35vw 370px no-repeat;
+            background-size: 50vw;
+            transform: rotate(180deg);
+        }
+    }
+
+    .item-tinh-nang {
+        cursor: pointer;
+        font-size: 24px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .21);
+        font-size: 17px;
+        background-color: #fff;
+        min-height: 200px;
+        padding: 10px;
+        transition: all .2s;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .item-first-left {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-right: 5%;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        justify-content: end;
+    }
+
+    .item-big {
+        width: 573px;
+
+        @media (min-width: 1024px) {
+            width: 31vw;
+        }
+
+        @media (min-width: 1200px) {
+            width: 34vw;
+        }
+
+        @media (min-width: 1536px) {
+            width: 33vw;
+        }
+    }
+
+    .item-small {
+        width: 450px;
+
+        @media (min-width: 1024px) {
+            width: 30vw;
+        }
+
+        @media (min-width: 1200px) {
+            width: 69vw;
+        }
+
+        @media (min-width: 1536px) {
+            width: 24vw;
+        }
+    }
+
+    .item-first-right {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-left: 5%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        justify-content: start;
+    }
+
+    .item-nth {
+        justify-content: center;
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    .hover_icon_blue_all:hover:before {
+        height: 100px;
+        width: 150px;
+        content: "";
+        position: absolute;
+        left: -25px;
+        background: url(https://meksmart.com/images/icon-blue.png?265b09746845979d298979a6b120cecd) left 44px no-repeat;
+        background-size: 100%;
+        transform: scaleX(-1) rotate(270deg);
+    }
+
+    .hover_icon_blue_all:hover:after,
+    .hover_icon_blue_left:hover:before,
+    .hover_icon_blue_right:hover:after {
+        height: 100px;
+        width: 150px;
+        content: "";
+        position: absolute;
+        background: url(https://meksmart.com/images/icon-blue.png?265b09746845979d298979a6b120cecd) left 44px no-repeat;
+        background-size: 100%;
+    }
+
+    .hover_icon_blue_all:hover:after,
+    .hover_icon_blue_right:hover:after {
+        right: -25px;
+        transform: rotate(270deg);
+    }
+
+    .hover_icon_blue_left:hover:before {
+        left: -25px;
+        transform: scaleX(-1) rotate(270deg);
+    }
+}
+
+#event {
+    bg-event {
+        position: relative;
+        background-image: linear-gradient(#ebedf8 10%, #fff 90%);
+
+        &::before {
+            background: url(https://meksmart.com/images/bg-quat-yellow.svg?e06809d325ad33e4dca573d7a9a15c4c) 0 bottom no-repeat;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 14%;
+            width: 50%;
+            height: 50%;
+            z-index: -1;
+            background-size: 90%;
+        }
+    }
+
+    .slick-big {
+        position: relative;
+
+        @media (min-width: 1024px) {
+            padding-bottom: 7rem;
+        }
+
+        @media (min-width: 1536px) {
+            padding-bottom: 12rem;
+        }
+
+        @media (min-width: 1200px) {
+            padding-bottom: 7rem;
+        }
+    }
+
+    .next-top-orange {
+        position: absolute;
+        left: 0;
+        top: -43px;
+        height: auto;
+        width: 200px;
+    }
+
+    .bg-event-blue {
+        height: 550px;
+        width: 58vw;
+        @media (min-width: 1536px) {
+            height: 79%;
+        }
+
+        @media (min-width: 1200px) {
+            height: 70%;
+        }
+
+        @media (min-width: 1024px) {
+            height: 61%;
+            width: 55vw;
+        }
+    }
+
+    .text-blue {
+        color: #001491;
+    }
+
+    .w-95 {
+        width: 95%;
+
+        @media (min-width: 1536px) {
+            width: 95%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 90%;
+        }
+    }
+
+    .bg-slick-event {
+        background: url(https://meksmart.com/images/icon-blue.png?265b09746845979d298979a6b120cecd) 50% no-repeat;
+        background-size: 50%;
+    }
 }

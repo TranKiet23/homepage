@@ -1,15 +1,17 @@
 <template>
-    <Swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{
+    <Swiper ref="swiper" :spaceBetween="30" :centeredSlides="true" :autoplay="{
         delay: 2000,
         disableOnInteraction: false,
     }" :pagination="{
         clickable: true,
-    }" :modules="modules" id="home-top" class="container mx-auto flex flex-wrap items-center" ref="mySwiper">
+    }" :modules="modules" :navigation="false" id="home-top"
+        class="container mx-auto flex flex-wrap items-center">
         <SwiperSlide>
             <div class="w-full" style="width: 100%; display: inline-block;">
                 <div class="flex flex-wrap items-center w-full">
                     <div class="w-full sm:w-1/2 flex flex-col justify-center sm:pr-24">
-                        <h1 class="number-font font-bold h1-content text-left">SMART TECHNOLOGY<br> FOR LOGISTICS SOLUTION</h1>
+                        <h1 class="number-font font-bold h1-content text-left">SMART TECHNOLOGY<br> FOR LOGISTICS
+                            SOLUTION</h1>
                         <div class="flex w-full mt-5 lg:flex-no-wrap flex-wrap">
                             <div class="flex text-center w-full lg:w-1/2 lg:pr-3"><button
                                     class="btn-white-text-blue modal-open lg:mb-0 mb-3 w-full" tabindex="0">Try
@@ -29,7 +31,8 @@
             <div class="w-full" style="width: 100%; display: inline-block;">
                 <div class="flex flex-wrap items-center w-full">
                     <div class="w-full sm:w-1/2 flex flex-col justify-center sm:pr-24">
-                        <h1 class="number-font h1-content font-bold text-left">MEKWMS WAREHOUSE MANAGEMENT SOLUTIONS</h1>
+                        <h1 class="number-font h1-content font-bold text-left">MEKWMS WAREHOUSE MANAGEMENT SOLUTIONS
+                        </h1>
                         <div class="flex w-full mt-5 lg:flex-no-wrap flex-wrap">
                             <div class="flex text-center w-full lg:w-1/2 lg:pr-3"><button
                                     class="btn-white-text-blue modal-open lg:mb-0 mb-3 w-full" tabindex="0">Try
@@ -49,7 +52,8 @@
             <div class="w-full" style="width: 100%; display: inline-block;">
                 <div class="flex flex-wrap items-center w-full">
                     <div class="w-full sm:w-1/2 flex flex-col justify-center sm:pr-24">
-                        <h1 class="number-font font-bold h1-content text-left">MEKTMS TRANSPORTATION AND DELIVERY MANAGEMENT
+                        <h1 class="number-font font-bold h1-content text-left">MEKTMS TRANSPORTATION AND DELIVERY
+                            MANAGEMENT
                             SOLUTIONS</h1>
                         <div class="flex w-full mt-5 lg:flex-no-wrap flex-wrap">
                             <div class="flex text-center w-full lg:w-1/2 lg:pr-3"><button
@@ -84,25 +88,27 @@
 </template>
 
 <script>
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Autoplay, Pagination, Navigation, Keyboard } from 'swiper/modules';
 import { useSwiper } from 'swiper/vue';
 export default {
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
     setup() {
         const swiper = useSwiper();
         return {
-            modules: [Autoplay, Pagination, Navigation],
-            swiper,
+            modules: [Autoplay, Pagination, Navigation, Keyboard],
+            swiper
         }
     },
     methods: {
         goPrev() {
-            console.log("🚀 ~ goPrev ~ this.$refs.mySwiper.swiper:", this.refs)
-
-
+            // this.$refs.swiper.slidePrev();
         },
         goNext() {
-            console.log("🚀 ~ goPrev ~ this.$refs.mySwiper.swiper:", this.refs)
-
+            // this.$refs.swiper.slideNext();
         },
     }
 }

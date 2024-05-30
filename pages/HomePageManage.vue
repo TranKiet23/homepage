@@ -102,9 +102,10 @@
     background-position: 50%;
     background-size: 100% 100%;
     min-height: 180px;
+
     &:hover {
-    background-image: url(https://meksmart.com/images/button-orange-top.png?9ec5e2560a7bc18a6d0f5d3dc62893fa);
-    color: #071699;
+        background-image: url(https://meksmart.com/images/button-orange-top.png?9ec5e2560a7bc18a6d0f5d3dc62893fa);
+        color: #071699;
     }
 }
 
@@ -116,6 +117,7 @@
     background-position: 50%;
     background-size: 100% 100%;
     min-height: 180px;
+
     &:hover {
         background-image: url(https://meksmart.com/images/button-orange-center.png?81a0aff0959e66b356bf4a805a36031c);
         color: #071699;
@@ -130,9 +132,37 @@
     background-position: 50%;
     background-size: 100% 100%;
     min-height: 180px;
+
     &:hover {
-    background-image: url(https://meksmart.com/images/button-orange-bottom.png?44e33d2ca2c935a6f010daa2d26717b6);
-    color: #071699;
+        background-image: url(https://meksmart.com/images/button-orange-bottom.png?44e33d2ca2c935a6f010daa2d26717b6);
+        color: #071699;
     }
 }
+
+.bg-quat-bottom {
+    padding: 130px;
+
+    @media (min-width: 1024px) {
+        padding: 80px;
+    }
+
+    @media (min-width: 1200px) {
+        padding: 130px;
+    }
+
+    &:before {
+        background-image: url(https://meksmart.com/images/element-03.png?90de1658f841244ae7561b1d091b3f03);
+        background-position: 6vw -32px;
+        background-repeat: no-repeat;
+        opacity: .4;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 50vw;
+    }
+}
+
 </style>
