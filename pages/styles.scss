@@ -273,6 +273,7 @@
     .bg-event-blue {
         height: 550px;
         width: 58vw;
+
         @media (min-width: 1536px) {
             height: 79%;
         }
@@ -291,6 +292,8 @@
         color: #001491;
     }
 
+ 
+
     .w-95 {
         width: 95%;
 
@@ -307,4 +310,24 @@
         background: url(https://meksmart.com/images/icon-blue.png?265b09746845979d298979a6b120cecd) 50% no-repeat;
         background-size: 50%;
     }
+
+    .slick-event {
+        padding-top: 75px;
+    }
+
+    .slick-list {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .slick-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }

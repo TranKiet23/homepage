@@ -90,17 +90,14 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination, Navigation, Keyboard } from 'swiper/modules';
-import { useSwiper } from 'swiper/vue';
 export default {
     components: {
         Swiper,
         SwiperSlide,
     },
     setup() {
-        const swiper = useSwiper();
         return {
             modules: [Autoplay, Pagination, Navigation, Keyboard],
-            swiper
         }
     },
     methods: {
